@@ -13,4 +13,4 @@ def test_create_products_from_csv():
         assert response.status_code in [200,201]
         
 
-#base test        yes
+#base test        yesd
