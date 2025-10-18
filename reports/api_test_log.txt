@@ -1,0 +1,4 @@
+[INFO] 2025-10-18 17:16:05.845276 - GET REQUEST::https://fakestoreapi.com/invalid_endpoint
+[INFO] 2025-10-18 17:16:06.300184 - POST Request::https://fakestoreapi.com/products, Payload: {'title': 123, 'price': 'wrong type'}
+[INFO] 2025-10-18 17:16:06.861081 - GET REQUEST::https://fakestoreapi.com/carts/user/1
+[INFO] 2025-10-18 17:16:07.394957 - GET REQUEST::https://fakestoreapi.com/users
