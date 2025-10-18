@@ -11,6 +11,5 @@ def test_create_products_from_csv():
     for product in read_csv_data('data/products.xlsx'):
         response = post_request('/products',product)
         assert response.status_code in [200,201]
-        
 
-#base test        yesd
+#base test        yesds
