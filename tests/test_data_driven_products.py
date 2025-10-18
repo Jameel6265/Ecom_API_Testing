@@ -1,15 +1,14 @@
-import csv
+import pandas as pd
 from utils.api_helper import post_request
 
-def read_csv_data(file_path):
-    with open(file_path,newline='') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            yield row
+# Function to read Excel data
+def read_excel_data(file_path):
+    df = pd.read_excel(file_path)  # Requires openpyxl
+    for _, row in df.iterrows():
+        yield row.to_dict()
 
-def test_create_products_from_csv():
-    for product in read_csv_data('data/products.xlsx'):
-        response = post_request('/products',product)
-        assert response.status_code in [200,201]
-
-#base test        yesds
+# Test function
+def test_create_products_from_excel():
+    for product in read_excel_data('data/products.xlsx'):
+        response = post_request('/products', product)
+        assert response.status_code in [200, 201]
