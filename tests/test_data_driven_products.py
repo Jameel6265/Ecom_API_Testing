@@ -8,7 +8,7 @@ def read_csv_data(file_path):
             yield row
 
 def test_create_products_from_csv():
-    for product in read_csv_data('data/products.csv'):
+    for product in read_csv_data('data/products.xlsx'):
         response = post_request('/products',product)
         assert response.status_code in [200,201]
         
